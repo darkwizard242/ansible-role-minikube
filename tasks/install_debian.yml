@@ -1,0 +1,10 @@
+---
+# tasks file for minikube - Debian/Ubuntu Family
+
+- name: Debian/Ubuntu Family | Downloading and setting up {{ minikube_app }} {{ minikube_version }}
+  get_url:
+    url: "{{ minikube_dl_url }}"
+    dest: "{{ minikube_bin_path }}/{{ minikube_app }}"
+    mode: "{{ minikube_bin_permission_mode }}"
+    owner: root
+    group: root
