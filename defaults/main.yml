@@ -7,4 +7,6 @@ minikube_os: linux
 minikube_arch: amd64
 minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_arch }}
 minikube_bin_path: "/usr/local/bin"
-minikube_bin_permission_mode: '0755'
+minikube_file_owner: root
+minikube_file_group: root
+minikube_file_mode: '0755'
