@@ -21,20 +21,24 @@ minikube_os: linux
 minikube_arch: amd64
 minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_arch }}
 minikube_bin_path: "/usr/local/bin"
-minikube_bin_permission_mode: '0755'
+minikube_file_owner: root
+minikube_file_group: root
+minikube_file_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable                     | Description
----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
-minikube_app                 | Defines the app to install i.e. **minikube**
-minikube_version             | Defined to dynamically fetch the desired version to install. Defaults to: **1.25.1**
-minikube_os                  | Defines os type. Defaults to: **linux**
-minikube_arch                | Defines os architecture. Defaults to: **amd64**
-minikube_dl_url              | Defines URL to download the minikube binary from.
-minikube_bin_path            | Defined to dynamically set the appropriate path to store minikube binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-minikube_bin_permission_mode | Defines the permission mode level for the file. Defaults to: `0755`
+Variable            | Description
+------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+minikube_app        | Defines the app to install i.e. **minikube**
+minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.25.1**
+minikube_os         | Defines os type. Defaults to: **linux**
+minikube_arch       | Defines os architecture. Defaults to: **amd64**
+minikube_dl_url     | Defines URL to download the minikube binary from.
+minikube_bin_path   | Defined to dynamically set the appropriate path to store minikube binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+minikube_file_owner | Owner for the binary file of minikube.
+minikube_file_group | Group for the binary file of minikube.
+minikube_file_mode  | Mode for the binary file of minikube.
 
 ## Dependencies
 
