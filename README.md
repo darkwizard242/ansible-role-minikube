@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 minikube_app: minikube
-minikube_version: 1.29.0
+minikube_version: 1.30.1
 minikube_os: linux
 minikube_arch: amd64
 minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_arch }}
@@ -31,7 +31,7 @@ minikube_file_mode: '0755'
 Variable            | Description
 ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 minikube_app        | Defines the app to install i.e. **minikube**
-minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.29.0**
+minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.30.1**
 minikube_os         | Defines os type. Defaults to: **linux**
 minikube_arch       | Defines os architecture. Defaults to: **amd64**
 minikube_dl_url     | Defines URL to download the minikube binary from.
