@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-minikube/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-minikube/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-minikube/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-minikube/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/57207?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/57207?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/57207?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-minikube?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-minikube?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-minikube/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-minikube/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-minikube/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-minikube/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/minikube) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-minikube&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-minikube) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-minikube?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-minikube?color=orange&style=flat-square)
 
 # Ansible Role: minikube
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 minikube_app: minikube
-minikube_version: 1.32.0
+minikube_version: 1.33.0
 minikube_os: linux
 minikube_arch: amd64
 minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_arch }}
@@ -31,7 +31,7 @@ minikube_file_mode: '0755'
 Variable            | Description
 ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 minikube_app        | Defines the app to install i.e. **minikube**
-minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.32.0**
+minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.33.0**
 minikube_os         | Defines os type. Defaults to: **linux**
 minikube_arch       | Defines os architecture. Defaults to: **amd64**
 minikube_dl_url     | Defines URL to download the minikube binary from.
