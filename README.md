@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 minikube_app: minikube
 minikube_version: 1.33.1
-minikube_os: linux
-minikube_arch: amd64
-minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_arch }}
+minikube_os: "{{ ansible_system | lower }}"
+minikube_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+minikube_dl_url: https://github.com/kubernetes/{{ minikube_app }}/releases/download/v{{ minikube_version }}/{{ minikube_app }}-{{ minikube_os }}-{{ minikube_architecture_map[ansible_architecture] }}
 minikube_bin_path: "/usr/local/bin"
 minikube_file_owner: root
 minikube_file_group: root
@@ -28,17 +36,17 @@ minikube_file_mode: '0755'
 
 ### Variables table:
 
-Variable            | Description
-------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
-minikube_app        | Defines the app to install i.e. **minikube**
-minikube_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.33.1**
-minikube_os         | Defines os type. Defaults to: **linux**
-minikube_arch       | Defines os architecture. Defaults to: **amd64**
-minikube_dl_url     | Defines URL to download the minikube binary from.
-minikube_bin_path   | Defined to dynamically set the appropriate path to store minikube binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-minikube_file_owner | Owner for the binary file of minikube.
-minikube_file_group | Group for the binary file of minikube.
-minikube_file_mode  | Mode for the binary file of minikube.
+Variable                  | Description
+------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+minikube_app              | Defines the app to install i.e. **minikube**
+minikube_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.33.1**
+minikube_os               | Defines os type.
+minikube_architecture_map | Defines os architecture.
+minikube_dl_url           | Defines URL to download the minikube binary from.
+minikube_bin_path         | Defined to dynamically set the appropriate path to store minikube binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+minikube_file_owner       | Owner for the binary file of minikube.
+minikube_file_group       | Group for the binary file of minikube.
+minikube_file_mode        | Mode for the binary file of minikube.
 
 ## Dependencies
 
