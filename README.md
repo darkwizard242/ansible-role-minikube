@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 minikube_app: minikube
-minikube_version: 1.35.0
+minikube_version: 1.36.0
 minikube_os: "{{ ansible_system | lower }}"
 minikube_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ minikube_file_mode: '0755'
 Variable                  | Description
 ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 minikube_app              | Defines the app to install i.e. **minikube**
-minikube_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.35.0**
+minikube_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.36.0**
 minikube_os               | Defines os type.
 minikube_architecture_map | Defines os architecture.
 minikube_dl_url           | Defines URL to download the minikube binary from.
