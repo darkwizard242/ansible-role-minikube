@@ -2,7 +2,7 @@
 # defaults file for minikube
 
 minikube_app: minikube
-minikube_version: 1.37.0
+minikube_version: 1.38.0
 minikube_os: "{{ ansible_system | lower }}"
 minikube_architecture_map:
   amd64: amd64
